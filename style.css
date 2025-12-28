@@ -1,10 +1,8 @@
-/* --- VARIABLES --- */
 :root {
   --bg-color: #E6E2DD;
   --text-color: #333;
 }
 
-/* --- BASICS --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -21,7 +19,6 @@ body {
   perspective: 1px;
 }
 
-/* --- THE STAGE --- */
 .parallax-stage {
   position: absolute;
   top: 0;
@@ -32,7 +29,6 @@ body {
   background-color: var(--bg-color); 
 }
 
-/* --- TYPOGRAPHY --- */
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
@@ -53,14 +49,13 @@ h1 {
 
 .hero-text {
   position: absolute;
-  top: 50%; /* Starts lower to be visible over the first image */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   z-index: 100;
 }
 
-/* --- THE LAYERS (BLENDING LOGIC) --- */
 .layer {
   position: absolute;
   width: 100%;
@@ -72,14 +67,14 @@ h1 {
 }
 
 .layer-3 {
-  background-image: url('tsuljilt1.png');
+  background-image: url('img/tsuljilt1.png');
   z-index: 10;
   top: 0;
   filter: brightness(0.9);
 }
 
 .layer-2 {
-  background-image: url('tsuljilt2.png');
+  background-image: url('img/tsuljilt2.png');
   z-index: 20;
   top: 100vh; 
 
@@ -88,7 +83,7 @@ h1 {
 }
 
 .layer-1 {
-  background-image: url('tsuljilt3.png');
+  background-image: url('img/tsuljilt3.png');
   z-index: 30;
   top: 200vh;
 
@@ -145,9 +140,9 @@ h1 {
 
 .spacer { height: 200px; }
 
-/* Mobile */
 @media only screen and (max-width: 768px) {
     .floater { display: none; }
     h1 { font-size: 2.5rem; }
     .text-block { margin: 5rem 1rem; }
+
 }
